@@ -86,6 +86,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
+        sed -i 's/TPLINK_FLASHLAYOUT := 8Mlzma/TPLINK_FLASHLAYOUT := 16Mlzma/' openwrt/target/linux/ar71xx/image/common-tp-link.mk
         make -j$(nproc) V=s
     - name : Upload artifact
       uses: actions/upload-artifact@master
