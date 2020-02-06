@@ -68,7 +68,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_Newifi_D2
+    - name: Configuration Customization - TP_Link_TL_WR1041N_ND_v2
       env:
         CONFIG_FILE: 'TP_Link_TL_WR1041N_ND_v2.config'
       run: |
